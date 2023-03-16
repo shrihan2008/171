@@ -1,0 +1,23 @@
+button{
+    opacity: 2;
+    width: 120px;
+    height: 50px;
+    background: #33cf4df6;
+
+}
+#button-div{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
+    width:100%;
+    z-index: 1;
+    border: 2px solid black;
+    
+}
+
+.swal-icon img{
+  width: 80px;
+  height: 80px;
+}
