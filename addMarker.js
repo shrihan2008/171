@@ -67,7 +67,7 @@ AFRAME.regiterComponent('create-markers',{
         //dish title
         var dishtitle=document.createElement('a-entity');
 
-        dishtitle.setAttribute("id",`dish-title-${dish.id}`);
+        dishtitle.setAttribute("id",`dish-name-${dish.id}`);
         dishtitle.setAttribute("position",{x:0,y:0,z:0.1});
         dishtitle.setAttribute("rotation",{x:0,y:0,z:0});
         dishtitle.setAttribute("text",{
@@ -116,7 +116,7 @@ price.setAttribute("text",{
     color: "white",
     width: 3,
     align: "center",
-    value: `Only\n $${dish.price}`
+    value: `Only\n $${toy.price}`
 });
 price.setAttribute("visible",false)
 price_p.appendChild(price)
@@ -128,7 +128,7 @@ marker.appendChild(price_p)
     getDishes:async function(){
         return await firebase
             .firestore()
-            .collection("dishes")
+            .collection("toy")
             .get()
             .then(snap=>{
                 return snap.docs.map(doc=>doc.data());
